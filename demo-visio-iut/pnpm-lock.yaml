@@ -8,6 +8,12 @@ dependencies:
   '@primevue/themes':
     specifier: ^4.2.5
     version: 4.2.5
+  primeflex:
+    specifier: ^3.3.1
+    version: 3.3.1
+  primeicons:
+    specifier: ^7.0.0
+    version: 7.0.0
   primevue:
     specifier: ^4.2.5
     version: 4.2.5(vue@3.5.13)
@@ -3065,6 +3071,14 @@ packages:
     dependencies:
       parse-ms: 4.0.0
     dev: true
+
+  /primeflex@3.3.1:
+    resolution: {integrity: sha512-zaOq3YvcOYytbAmKv3zYc+0VNS9Wg5d37dfxZnveKBFPr7vEIwfV5ydrpiouTft8MVW6qNjfkaQphHSnvgQbpQ==}
+    dev: false
+
+  /primeicons@7.0.0:
+    resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
+    dev: false
 
   /primevue@4.2.5(vue@3.5.13):
     resolution: {integrity: sha512-7UMOIJvdFz4jQyhC76yhNdSlHtXvVpmE2JSo2ndUTBWjWJOkYyT562rQ4ayO+bMdJLtzBGqgY64I9ZfEvNd7vQ==}
