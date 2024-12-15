@@ -1,8 +1,8 @@
 <template>
-    <AuthorCard :author="author" @saveAuthor="saveAuthor($event)"></AuthorCard>
+    <AuthorCard v-model:author="author"></AuthorCard>
 
     <div>
- {{ author.firstName + " " + author.lastName }}
+    {{ "Author page : " + author.firstName + " " + author.lastName }}
     </div>
 </template>
 
@@ -12,8 +12,4 @@ import type { Author } from '@/model/Author.model';
 import { ref } from 'vue';
 
 const author = ref<Author>({ id: -1, firstName: "George", lastName: "Orwell" });
-
-function saveAuthor(newAuthor: Author) {
-    author.value = {...newAuthor};
-}
 </script>

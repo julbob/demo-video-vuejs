@@ -3,38 +3,24 @@
         <InputGroupAddon>
             <i class="pi pi-user"></i>
         </InputGroupAddon>
-        <InputText v-model="localAuthor.firstName"></InputText>
+        <InputText v-model="author.firstName"></InputText>
     </InputGroup>
 
     <InputGroup>
         <InputGroupAddon>
             <i class="pi pi-user"></i>
         </InputGroupAddon>
-        <InputText v-model="localAuthor.lastName"></InputText>
+        <InputText v-model="author.lastName"></InputText>
     </InputGroup>
 
-    {{ localAuthor.firstName + " " + localAuthor.lastName}}
+    {{ "Author card :" + author.firstName + " " + author.lastName}}
 
-    <Button :label="label" @click="saveAuthor()"></Button>
 </template>
 
 <script setup lang="ts">
-import { InputGroup, InputGroupAddon, InputText, Button } from 'primevue';
+import { InputGroup, InputGroupAddon, InputText } from 'primevue';
 import type { Author } from '@/model/Author.model';
-import { ref } from 'vue';
 
-const label = "Save";
-const props = defineProps<{author: Author}>();
-const localAuthor = ref<Author>({ ...props.author });
-
-const emits = defineEmits<{
-    (e: 'saveAuthor', author: Author): void
-}>();
-
-function saveAuthor(){
-    emits("saveAuthor", localAuthor.value);
-}
-
-
+const author = defineModel<Author>('author', {required: true});
 
 </script>
